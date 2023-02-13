@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
-import { client } from "./client";
+
 import Starters from "./components/Starters";
 import Pasta from "./components/Pasta";
 import Dessert from "./components/Dessert";
@@ -30,7 +30,8 @@ function App() {
   }
   */
 
-  const url = "http://localhost:8060/api/recipes";
+  //const url = "http://localhost:8060/api/recipes";
+  const url = "https://cookbook-project.onrender.com/api/recipes";
 
   const getData = () => {
     fetch(url)

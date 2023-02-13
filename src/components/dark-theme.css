@@ -1,0 +1,58 @@
+/* Add the following styles to your dark-theme.css file */
+
+.dark {
+  /* Add styles for dark theme */
+  color: white;
+  background-color: black;
+}
+
+.dark .homepage-button {
+  /* Add styles for buttons in dark theme */
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+
+.dark .homepage-button:hover {
+  /* Add styles for buttons in dark theme when hovered over */
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.dark .homepage-searchbar {
+  /* Add styles for search bar in dark theme */
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+
+.dark .homepage-error {
+  /* Add styles for error message in dark theme */
+  color: white;
+}
+
+.dark .homepage-recipe-list-item {
+  /* Add styles for recipe list items in dark theme */
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+
+.dark .homepage-recipe-list-item:hover {
+  /* Add styles for recipe list items in dark theme when hovered over */
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.dark .homepage-recipe-list-img {
+  /* Add styles for recipe list images in dark theme */
+  border: 2px solid white;
+}
+
+.dark.background {
+  /* Add styles for dark theme */
+  color: white;
+  background-color: black;
+}

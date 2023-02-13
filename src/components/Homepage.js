@@ -6,6 +6,7 @@ import Cloth from "../images/tablecloth.jpg";
 import { Link } from "react-router-dom";
 import "./homepage.css";
 import "./category.css";
+import "./dark-theme.css";
 import { FaPizzaSlice } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { AiOutlineConsoleSql } from "react-icons/ai";
@@ -16,6 +17,7 @@ export default function Homepage({ recipes }) {
   const [randomRecipe, setRandomRecipe] = useState([]);
   const [searchError, setSearchError] = useState(null);
   const [query, setQuery] = useState("");
+  const [theme, setTheme] = useState("light");
 
   const inputHandler = (e, query) => {
     e.preventDefault();
@@ -48,11 +50,26 @@ export default function Homepage({ recipes }) {
     return console.log(randomRecipe);
   };
 
+  const toggleTheme = () => {
+    // added function to toggle between light and dark themes
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
     <div
-      className="background"
+      className={`background ${theme}`} // added conditional classname based on the current theme
       style={{ backgroundImage: `url(${Cloth})`, backgroundRepeat: "repeat" }}
     >
+      <button
+        className="homepage-theme-toggle" // added button to toggle between light and dark themes
+        onClick={toggleTheme}
+      >
+        Toggle theme
+      </button>
       <div className="homepage">
         <h2 className="main-title">What would you like to cook today?</h2>
         <p className="main-subtitle">
