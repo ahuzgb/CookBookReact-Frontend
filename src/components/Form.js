@@ -41,13 +41,16 @@ export default function Form() {
   const createPost = async (formData) => {
     try {
       //const res = await fetch("http://localhost:8060/api/recipes", {
-      const res = await fetch("https://cookbook-project.onrender.com/recipes", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
+      const res = await fetch(
+        "https://cookbook-project.onrender.com/api/recipes",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
       if (!res.ok) throw new Error("Something went wrong");
       const post = await res.json();
       return { post };
