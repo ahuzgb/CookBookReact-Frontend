@@ -53,11 +53,20 @@ function App() {
 
   useEffect(() => getData, []);*/
 
-  const getData = () => {
+  /*  const getData = () => {
     fetch(url)
       .then((data) => data.text())
       .then((text) => {
         console.log(text);
+        // process the text data here
+      });
+  }; */
+
+  const getData = () => {
+    fetch(url)
+      .then((res) => console.log(res))
+      .then((data) => {
+        console.log(data.text());
         // process the text data here
       });
   };
