@@ -66,6 +66,7 @@ function App() {
     fetch(url)
       .then((res) => console.log(res))
       .then((data) => {
+        console.log(data);
         console.log(data.text());
         // process the text data here
       });
