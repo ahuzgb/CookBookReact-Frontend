@@ -33,7 +33,7 @@ function App() {
   //const url = "http://localhost:8060/api/recipes";
   const url = "https://cookbook-project.onrender.com/api/recipes";
 
-  const getData = () => {
+  /*const getData = () => {
     fetch(url)
       .then((response) => {
         console.log(response);
@@ -51,9 +51,9 @@ function App() {
       });
   };
 
-  useEffect(() => getData, []);
+  useEffect(() => getData, []);*/
 
-  /*const getData = () => {
+  const getData = () => {
     fetch(url)
       .then((data) => data.text())
       .then((text) => {
@@ -62,7 +62,7 @@ function App() {
       });
   };
 
-  useEffect(() => getData(), []);*/
+  useEffect(() => getData(), []);
 
   // Arrays with recipe categories to pass as prop to the components (after routing)
 
