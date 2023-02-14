@@ -35,10 +35,19 @@ function App() {
 
   const getData = () => {
     fetch(url)
-      .then((data) => data.json())
+      .then((response) => {
+        console.log(response);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((res) => {
         console.log(res);
         setRecipes(res);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
       });
   };
 
