@@ -35,6 +35,17 @@ function App() {
 
   const getData = () => {
     fetch(url)
+      .then((data) => data.json())
+      .then((res) => {
+        console.log(res);
+        setRecipes(res);
+      });
+  };
+
+  useEffect(() => getData, []);
+
+  /*const getData = () => {
+    fetch(url)
       .then((data) => data.text())
       .then((text) => {
         console.log(text);
@@ -42,7 +53,8 @@ function App() {
       });
   };
 
-  useEffect(() => getData(), []);
+  useEffect(() => getData(), []);*/
+
   // Arrays with recipe categories to pass as prop to the components (after routing)
 
   const starters = recipes.filter((recipe) => recipe.type === "starters");
